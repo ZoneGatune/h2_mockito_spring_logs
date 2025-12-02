@@ -56,7 +56,7 @@ public class ClienteServiceTest {
         given(clienteRepository.findAll()).willReturn(clientes);
 
         // When (Act)
-        List<Cliente> resultado = clienteService.getClientes();
+        List<Cliente> resultado = clienteService.getCliente();
 
         // Then (Assert)
         assertThat(resultado).isNotNull();

@@ -2,6 +2,7 @@ package com.example.springbootswaggerh2.controller;
 
 
 import com.example.springbootswaggerh2.model.Cliente;
+import com.example.springbootswaggerh2.model.dto.ClienteDTO;
 import com.example.springbootswaggerh2.service.ClienteService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -51,7 +52,7 @@ public class ClienteController {
 			@ApiResponse(code = 404, message = "The resource you were trying to reach is not found"),
 			@ApiResponse(code = 500, message = "Internal server error")
 	})
-	public List<Cliente> getClientes() {
+	public List<ClienteDTO> getClientes() {
 		return service.getClientes();
 	}
 	

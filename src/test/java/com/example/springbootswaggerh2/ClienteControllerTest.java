@@ -48,7 +48,7 @@ public class ClienteControllerTest {
         cliente2.setApellidoPaterno("González");
         cliente2.setApellidoMaterno("González");
 
-        given(clienteService.getClientes()).willReturn(Arrays.asList(cliente1, cliente2));
+        given(clienteService.getCliente()).willReturn(Arrays.asList(cliente1, cliente2));
 
         // When & Then
         mockMvc.perform(get("/clientes")

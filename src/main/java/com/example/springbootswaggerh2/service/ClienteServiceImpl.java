@@ -2,6 +2,7 @@ package com.example.springbootswaggerh2.service;
 
 import com.example.springbootswaggerh2.exception.ResourceNotFoundException;
 import com.example.springbootswaggerh2.model.Cliente;
+import com.example.springbootswaggerh2.model.dto.ClienteDTO;
 import com.example.springbootswaggerh2.repository.ClienteRepository;
 import com.example.springbootswaggerh2.util.LogHelper;
 import lombok.extern.slf4j.Slf4j;
@@ -12,7 +13,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 @Service
 @Slf4j
@@ -46,11 +50,20 @@ public class ClienteServiceImpl implements ClienteService {
 	}
 
 	@Override
-	public List<Cliente> getClientes() {
-		return repository.findAll();
+	public List<ClienteDTO> getClientes() {
+        List<Cliente> clientes = repository.findAll();
+
+        return clientes.stream()
+                .map(cliente -> new ClienteDTO(cliente))
+                .collect(Collectors.toList());
 	}
 
-	@Override
+    @Override
+    public List<Cliente> getCliente() {
+        return repository.findAll();
+    }
+
+    @Override
 	public Cliente updateClienteById(Long id, Cliente cliente) {
         Cliente clienteDetail = this.getClienteById(id);
         clienteDetail.setNombre(cliente.getNombre());
