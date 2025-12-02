@@ -2,9 +2,7 @@ package com.example.springbootswaggerh2.service;
 
 import com.example.springbootswaggerh2.exception.ResourceNotFoundException;
 import com.example.springbootswaggerh2.model.Cliente;
-import com.example.springbootswaggerh2.model.Employee;
 import com.example.springbootswaggerh2.repository.ClienteRepository;
-import com.example.springbootswaggerh2.repository.EmployeeRepository;
 import com.example.springbootswaggerh2.util.LogHelper;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
@@ -13,7 +11,6 @@ import org.slf4j.MDC;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.xml.crypto.Data;
 import java.util.Date;
 import java.util.List;
 

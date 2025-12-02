@@ -1,7 +1,6 @@
 package com.example.springbootswaggerh2.service;
 
 import com.example.springbootswaggerh2.model.Cliente;
-import com.example.springbootswaggerh2.model.Employee;
 
 import java.util.List;
 
