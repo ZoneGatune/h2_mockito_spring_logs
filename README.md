@@ -2,7 +2,7 @@ PRUEBA DE JAVA MICROSERVICIOS
 
 
 • Spring boot
-• Java 11
+• Java 17
 • Maven
 • Swagger(levantar en un localhost)
 • Jpa
@@ -12,5 +12,12 @@ SWAGGER
 
 http://localhost:8081/swagger-ui/index.html
 
-git clone https://github.com/ZoneGatune/exam_h2_spring_maven.git
-maven clean build
+git clone https://github.com/ZoneGatune/h2_mockito_spring_logs.git
+
+• Descargar el proyecto
+
+• Ejecutar maven
+
+• Probar desde postman al http://localhost:8081/
+
+• /clientes tiene todos los verbos
